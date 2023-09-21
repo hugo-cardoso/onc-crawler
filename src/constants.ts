@@ -1,0 +1,1 @@
+export const AIRPORTS_PER_PAGE = 50;
