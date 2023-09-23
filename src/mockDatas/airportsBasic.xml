@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aisweb>
+    <rotaer pagesize="1" total="3659">
+        <item ciad_id="5978">
+            <id>27cfb65f-d47e-4752-a2a6-b082bbd3f386</id>
+            <type>AD</type>
+            <AeroCode>SBCH</AeroCode>
+            <ciad>SC0003</ciad>
+            <name>
+                <![CDATA[Serafin Enoss Bertaso]]>
+            </name>
+            <city>
+                <![CDATA[Chapecó]]>
+            </city>
+            <uf>SC</uf>
+            <lng>-52.658888888889</lng>
+            <lat>-27.133888888889</lat>
+            <dt>2023-09-21</dt>
+        </item>
+    </rotaer>
+</aisweb>

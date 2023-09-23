@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type AirportLocationCoordinates {
+  lat String
+  lng String
+}
+
+type AirportLocation {
+  city String
+  state String
+  coordinates AirportLocationCoordinates
+}
+
+type AirportRadio {
+  frequences String[]
+  type String
+}
+
+type AirportChart {
+  id String
+  name String
+  type String
+  chartUrl String
+}
+
+type AirportRunway {
+  headboards String[]
+  ident String
+  length String
+  type String
+  width String
+}
+
+model Airports {
+  id String @id @map("_id")
+  icao String
+  name String
+  location AirportLocation
+  charts AirportChart[]
+  radios AirportRadio[]
+  runways AirportRunway[]
+
+  @@map("airports")
+}

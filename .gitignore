@@ -2,3 +2,4 @@
 .env
 yarn*
 package-lock.json
+coverage

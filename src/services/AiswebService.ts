@@ -1,25 +1,28 @@
 import Axios from "axios";
 
-import { AirportXML } from "@/models/AirportXML";
-import { AirportListXML } from "@/models/AirportListXML";
-import { AirportChartListXML } from "@/models/AirportChartListXML";
+import { Airport } from "@/models/Airport";
+import { AirportChart } from "@/models/AirportChart";
+
+import { AirportXMLConverter } from "@/utils/AirportXMLConverter";
+import { AirportChartsXMLConverter } from "@/utils/AirportChartsXMLConverter";
+import { AirportBasicListXMLConverter } from "@/utils/AirportBasicListXMLConverter";
 
 import { AIRPORTS_PER_PAGE } from "@/constants";
 
 export class AiswebService {
-  readonly baseUrl = "http://aisweb.decea.gov.br/api";
+  static readonly baseUrl = "http://aisweb.decea.gov.br/api";
   private key = process.env.AISWEB_API_KEY;
   private pass = process.env.AISWEB_API_PASS;
 
   private http = Axios.create({
-    baseURL: this.baseUrl,
+    baseURL: AiswebService.baseUrl,
     params: {
       apiKey: this.key,
       apiPass: this.pass,
     },
   });
 
-  async getAirportsCount() {
+  async getAirportsCount(): Promise<number> {
     try {
       const response = await this.http({
         params: {
@@ -30,7 +33,7 @@ export class AiswebService {
         },
       });
 
-      const airports = new AirportListXML(response.data);
+      const airports = AirportBasicListXMLConverter.convert(response.data);
 
       return airports.total;
     } catch (error) {
@@ -38,29 +41,29 @@ export class AiswebService {
     }
   }
 
-  async getAirports(page: number) {
+  async getAirports(page: number): Promise<Airport[]> {
     try {
       const response = await this.http({
         params: {
           rowstart: page ? (page - 1) * AIRPORTS_PER_PAGE : 0,
-          rowend: page * AIRPORTS_PER_PAGE,
+          rowend: AIRPORTS_PER_PAGE,
           area: "rotaer",
           type: "AD",
         }
       });
 
-      const airportList = new AirportListXML(response.data);
-      const icaos = airportList.items.map(airport => airport.icao).filter(Boolean) as string[];
+      const airportList = AirportBasicListXMLConverter.convert(response.data);
+      const icaos = airportList.airports.map(airport => airport.icao).filter(Boolean);
 
       const airports = await Promise.all(icaos.map(icao => this.getAirportByIcao(icao)));
 
-      return airports.filter(airport => airport.hasDoc);
+      return airports.filter(airport => airport.icao);
     } catch (error) {
       throw new Error("Error getting airports");
     }
   }
 
-  async getAirportByIcao(icao: string) {
+  async getAirportByIcao(icao: string): Promise<Airport> {
     try {
       const response = await this.http({
         params: {
@@ -69,20 +72,14 @@ export class AiswebService {
         }
       });
 
-      if (!response.data) {
-        throw new Error(`Airport ${icao} not found`);
-      }
-
-      const airport = new AirportXML(response.data);
-
-      return airport;
+      return AirportXMLConverter.convert(response.data);
     } catch (error) {
       console.log(error);
       throw new Error("Error getting airport by ICAO");
     }
   }
 
-  async getAirportChartsByIcao(icao: string) {
+  async getAirportChartsByIcao(icao: string): Promise<AirportChart[]> {
     try {
       const response = await this.http({
         params: {
@@ -91,9 +88,9 @@ export class AiswebService {
         }
       });
 
-      const charts = new AirportChartListXML(response.data);
+      const charts = AirportChartsXMLConverter.convert(response.data);
 
-      return charts.items;
+      return charts;
     } catch (error) {
       throw new Error("Error getting airport charts by ICAO");
     }

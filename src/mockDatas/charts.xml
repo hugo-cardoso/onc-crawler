@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aisweb>
+    <cartas emenda="2023-09-07" lastupdate="{ts '2023-09-11 18:27:41'}" total="29">
+        <item id="c989852d-7005-403a-b094a64a50bd071c">
+            <id>c989852d-7005-403a-b094a64a50bd071c</id>
+            <especie>Convencionais</especie>
+            <tipo>AOC</tipo>
+            <tipo_descr>Cartas de Obstáculo</tipo_descr>
+            <nome>
+                <![CDATA[AD 2 SBSP A]]>
+            </nome>
+            <IcaoCode>SBSP</IcaoCode>
+            <dt>2023-09-07</dt>
+            <link>
+                <![CDATA[https://aisweb.decea.gov.br/download/?arquivo=c989852d-7005-403a-b094a64a50bd071c&amp;apikey=1635529713]]>
+            </link>
+            <arquivo>sbsp_ad-2-sbsp-a_aoc_20230907</arquivo>
+            <kmz/>
+            <aviso/>
+            <icp/>
+            <pe>0</pe>
+            <notam/>
+            <tabcode/>
+            <suplementos count="0">
+					
+					</suplementos>
+            <dtPublic>2023-08-01</dtPublic>
+            <amdt>2309A1</amdt>
+            <use>
+						 Ostensivo 
+					</use>
+        </item>
+        <item id="07ced1af-1be0-41e3-9488b4a30326200c">
+            <id>07ced1af-1be0-41e3-9488b4a30326200c</id>
+            <especie>Convencionais</especie>
+            <tipo>ADC</tipo>
+            <tipo_descr>Carta de Aeródromo</tipo_descr>
+            <nome>
+                <![CDATA[ADC SBSP]]>
+            </nome>
+            <IcaoCode>SBSP</IcaoCode>
+            <dt>2023-09-07</dt>
+            <link>
+                <![CDATA[https://aisweb.decea.gov.br/download/?arquivo=07ced1af-1be0-41e3-9488b4a30326200c&amp;apikey=1635529713]]>
+            </link>
+            <arquivo>sbsp_adc-sbsp_adc_20230907</arquivo>
+            <kmz/>
+            <aviso/>
+            <icp/>
+            <pe>0</pe>
+            <notam/>
+            <tabcode/>
+            <suplementos count="0">
+					
+					</suplementos>
+            <dtPublic>2023-08-01</dtPublic>
+            <amdt>2309A1</amdt>
+            <use>
+						 Ostensivo 
+					</use>
+        </item>
+        <item id="91143280-87ff-4340-bc3d7c2515fa03f6">
+            <id>91143280-87ff-4340-bc3d7c2515fa03f6</id>
+            <especie>Convencionais</especie>
+            <tipo>PDC</tipo>
+            <tipo_descr>Carta de Estacionamento de Aeródromos</tipo_descr>
+            <nome>
+                <![CDATA[PDC SBSP]]>
+            </nome>
+            <IcaoCode>SBSP</IcaoCode>
+            <dt>2023-09-07</dt>
+            <link>
+                <![CDATA[https://aisweb.decea.gov.br/download/?arquivo=91143280-87ff-4340-bc3d7c2515fa03f6&amp;apikey=1635529713]]>
+            </link>
+            <arquivo>sbsp_pdc-sbsp_pdc_20230907</arquivo>
+            <kmz/>
+            <aviso/>
+            <icp/>
+            <pe>0</pe>
+            <notam/>
+            <tabcode/>
+            <suplementos count="0">
+					
+					</suplementos>
+            <dtPublic>2023-08-01</dtPublic>
+            <amdt>2309A1</amdt>
+            <use>
+						 Ostensivo 
+					</use>
+        </item>
+    </cartas>
+</aisweb>

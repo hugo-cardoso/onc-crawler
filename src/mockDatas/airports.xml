@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aisweb>
+    <rotaer pagesize="5" total="3659">
+        <item ciad_id="5978">
+            <id>27cfb65f-d47e-4752-a2a6-b082bbd3f386</id>
+            <type>AD</type>
+            <AeroCode>SBCH</AeroCode>
+            <ciad>SC0003</ciad>
+            <name>
+                <![CDATA[Serafin Enoss Bertaso]]>
+            </name>
+            <city>
+                <![CDATA[Chapecó]]>
+            </city>
+            <uf>SC</uf>
+            <lng>-52.658888888889</lng>
+            <lat>-27.133888888889</lat>
+            <dt>2023-09-21</dt>
+        </item>
+        <item ciad_id="8615">
+            <id>6efe8810-36fe-450a-8003-b857b78c9abd</id>
+            <type>AD</type>
+            <AeroCode>SBMO</AeroCode>
+            <ciad>AL0001</ciad>
+            <name>
+                <![CDATA[Zumbi dos Palmares]]>
+            </name>
+            <city>
+                <![CDATA[Maceió]]>
+            </city>
+            <uf>AL</uf>
+            <lng>-35.791666666667</lng>
+            <lat>-9.510833333333</lat>
+            <dt>2023-09-21</dt>
+        </item>
+        <item ciad_id="5951">
+            <id>8c477cf7-8ae6-46f8-888e-759b7761a298</id>
+            <type>AD</type>
+            <AeroCode>SBPF</AeroCode>
+            <ciad>RS0006</ciad>
+            <name>
+                <![CDATA[LAURO KURTZ]]>
+            </name>
+            <city>
+                <![CDATA[Passo Fundo]]>
+            </city>
+            <uf>RS</uf>
+            <lng>-52.328333333333</lng>
+            <lat>-28.244166666667</lat>
+            <dt>2023-09-21</dt>
+        </item>
+        <item ciad_id="8834">
+            <id>d57ea562-b9e6-4e8c-913a-1ca4daf3d159</id>
+            <type>AD</type>
+            <AeroCode>SBPG</AeroCode>
+            <ciad>PR0012</ciad>
+            <name>
+                <![CDATA[Comandante Antônio Amilton Beraldo]]>
+            </name>
+            <city>
+                <![CDATA[Ponta Grossa]]>
+            </city>
+            <uf>PR</uf>
+            <lng>-50.143888888889</lng>
+            <lat>-25.184444444444</lat>
+            <dt>2023-09-21</dt>
+        </item>
+        <item ciad_id="7944">
+            <id>bc176d2c-6e32-4a84-975e-a5f8956d47e0</id>
+            <type>AD</type>
+            <AeroCode>SDWG</AeroCode>
+            <ciad>BA0080</ciad>
+            <name>
+                <![CDATA[Fazenda Santa Maria]]>
+            </name>
+            <city>
+                <![CDATA[São Desidério]]>
+            </city>
+            <uf>BA</uf>
+            <lng>-45.132777777778</lng>
+            <lat>-13.059166666667</lat>
+            <dt>2023-09-21</dt>
+        </item>
+    </rotaer>
+</aisweb>
