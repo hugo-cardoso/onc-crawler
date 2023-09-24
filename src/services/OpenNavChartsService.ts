@@ -1,9 +1,13 @@
+import Axios from "axios";
+
 import { DatabaseService } from "@/services/DatabaseService";
+import { BucketS3Service } from "@/services/BucketS3Service";
 
 import { Airport } from "@/models/Airport";
 
 export class OpenNavChartsService {
   private databaseService = new DatabaseService();
+  private bucketS3Service = new BucketS3Service();
 
   async saveAirport(airport: Airport) {
     return this.databaseService.db.airports.upsert({
@@ -56,5 +60,32 @@ export class OpenNavChartsService {
         }))
       }
     });
+  }
+
+  async saveAirportChartsToBucket(airport: Airport) {
+    try {
+      console.log(`[${airport.icao}] - Loading charts [${airport.charts.length}]`);
+      const chartsFile = await Promise.all(
+        airport.charts.map(chart => {
+          return Axios.get(chart.url, {
+            responseType: "stream"
+          })
+        })
+      );
+
+      console.log(`[${airport.icao}] - Uploading charts [${chartsFile.length}]`);
+      await Promise.all(
+        chartsFile.map((fileResponse, index) => {
+          const chart = airport.charts.at(index)!;
+
+          return this.bucketS3Service.uploadFile(
+            fileResponse.data,
+            `${airport.icao}/${chart.id}.pdf`
+          );
+        })
+      )
+    } catch (error) {
+      console.error(error);
+    }
   }
 }

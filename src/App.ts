@@ -33,6 +33,7 @@ export class App {
           airport.charts = await this.aiswebService.getAirportChartsByIcao(airport.icao);
 
           await this.openNavChartsService.saveAirport(airport);
+          await this.openNavChartsService.saveAirportChartsToBucket(airport);
           console.log(`[${airport.icao}] - OK`);
         }
       }
