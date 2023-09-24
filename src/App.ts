@@ -28,14 +28,16 @@ export class App {
         
         const airports = await this.aiswebService.getAirports(page);
 
-        for (const airport of airports) {
-          console.log(`[${airport.icao}] - Loading`);
-          airport.charts = await this.aiswebService.getAirportChartsByIcao(airport.icao);
+        await Promise.all(
+          airports.map(async (airport) => {
+            console.log(`[${airport.icao}] - Loading`);
+            airport.charts = await this.aiswebService.getAirportChartsByIcao(airport.icao);
 
-          await this.openNavChartsService.saveAirport(airport);
-          await this.openNavChartsService.saveAirportChartsToBucket(airport);
-          console.log(`[${airport.icao}] - OK`);
-        }
+            await this.openNavChartsService.saveAirport(airport);
+            await this.openNavChartsService.saveAirportChartsToBucket(airport);
+            console.log(`[${airport.icao}] - OK`);
+          })
+        )
       }
     } catch (error) {
       console.error(error);
