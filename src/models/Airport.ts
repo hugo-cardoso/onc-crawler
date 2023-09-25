@@ -1,6 +1,6 @@
 import { AirportLocation } from "@/models/AirportLocation";
-import { AirportChart } from "@/models/AirportChart";
 import { AirportRadio } from "@/models/AirportRadio";
+import { AirportChartList } from "@/models/AirportChartList";
 
 export class Airport {
   constructor(
@@ -8,6 +8,7 @@ export class Airport {
     public readonly name: string,
     public readonly location: AirportLocation,
     public readonly radios: AirportRadio[],
-    public charts: AirportChart[],
+    public readonly lastUpdate: Date,
+    public charts: AirportChartList,
   ) {}
 }

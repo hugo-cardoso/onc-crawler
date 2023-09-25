@@ -44,8 +44,10 @@ model Airports {
   name String
   location AirportLocation
   charts AirportChart[]
+  chartsLastUpdate DateTime
   radios AirportRadio[]
   runways AirportRunway[]
+  lastUpdate DateTime
 
   @@map("airports")
 }

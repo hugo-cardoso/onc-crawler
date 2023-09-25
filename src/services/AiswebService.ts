@@ -1,13 +1,13 @@
 import Axios from "axios";
 
 import { Airport } from "@/models/Airport";
-import { AirportChart } from "@/models/AirportChart";
 
 import { AirportXMLConverter } from "@/utils/AirportXMLConverter";
 import { AirportChartsXMLConverter } from "@/utils/AirportChartsXMLConverter";
 import { AirportBasicListXMLConverter } from "@/utils/AirportBasicListXMLConverter";
 
 import { AIRPORTS_PER_PAGE } from "@/constants";
+import { AirportChartList } from "@/models/AirportChartList";
 
 export class AiswebService {
   static readonly baseUrl = "http://aisweb.decea.gov.br/api";
@@ -79,7 +79,7 @@ export class AiswebService {
     }
   }
 
-  async getAirportChartsByIcao(icao: string): Promise<AirportChart[]> {
+  async getAirportChartsByIcao(icao: string): Promise<AirportChartList> {
     try {
       const response = await this.http({
         params: {
@@ -88,9 +88,9 @@ export class AiswebService {
         }
       });
 
-      const charts = AirportChartsXMLConverter.convert(response.data);
+      const chartList = AirportChartsXMLConverter.convert(response.data);
 
-      return charts;
+      return chartList;
     } catch (error) {
       throw new Error("Error getting airport charts by ICAO");
     }

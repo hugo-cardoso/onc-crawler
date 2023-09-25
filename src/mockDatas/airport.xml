@@ -1,335 +1,738 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aisweb>
-	<status>Active</status>
-	<dt/>
-	<AeroCode>SBSP</AeroCode>
-	<ciad>SP0831</ciad>
-	<name>
-		<![CDATA[Congonhas]]>
-	</name>
-	<city>
-		<![CDATA[São Paulo]]>
-	</city>
-	<uf>SP</uf>
-	<lat>-23.626111111111</lat>
-	<lng>-46.656388888889</lng>
-	<latRotaer>23 37 34S</latRotaer>
-	<lngRotaer>046 39 23W</lngRotaer>
-	<distance>5S</distance>
-	<org>
-		<name>INFRAERO</name>
-		<type>ORG</type>
-		<military>CIVIL</military>
-	</org>
-	<workinghour compl=""/>
-	<type>AD</type>
-	<typeUtil>PUB</typeUtil>
-	<cat>NAC</cat>
-	<utc>-3</utc>
-	<altM>802</altM>
-	<altFt>2631</altFt>
-	<fir>SBCW</fir>
-	<jur>SRPV-SP</jur>
-	<lights>
-		<light compl="" descr="Farol rotativo de aeródromo">L21</light>
-		<light compl="" descr="Indicador de direção de vento iluminado">L26</light>
-		<light compl="" descr="Luzes de obstáculo">L23</light>
-	</lights>
-	<runways count="2">
-		<runway compl="">
-			<type>RWY</type>
-			<ident>17R/35L</ident>
-			<surface compl=""/>
-			<length compl="">1940</length>
-			<width compl="">45</width>
-			<surface_c compl="">50/F/B/X/T COMP</surface_c>
-			<lights>
-				<light compl="" descr="Luzes ao longo das laterais da pista de alta intensidade, de 60 em 60 metros.">L14A</light>
-			</lights>
-			<thr compl="">
-				<ident>17R</ident>
-				<lights>
-					<light compl="" descr="ALSF-1">L4</light>
-					<light compl="" descr="PAPI" gradient="2,87">L9</light>
-					<light compl="" descr="REIL">L10</light>
-					<light compl="" descr="Luzes de cabeceira de alta intensidade (verde no início e vermelha no fim da pista).">L12A</light>
-				</lights>
-			</thr>
-			<thr compl="">
-				<ident>35L</ident>
-				<lights>
-					<light compl="" descr="PAPI">L9</light>
-					<light compl="" descr="REIL">L10</light>
-					<light compl="" descr="Luzes de cabeceira de alta intensidade (verde no início e vermelha no fim da pista).">L12A</light>
-				</lights>
-			</thr>
-		</runway>
-		<runway compl="">
-			<type>RWY</type>
-			<ident>17L/35R</ident>
-			<surface compl=""/>
-			<length compl="">1495</length>
-			<width compl="">45</width>
-			<surface_c compl="">38/F/B/X/U</surface_c>
-			<lights>
-				<light compl="" descr="Luzes ao longo das laterais da pista, de 60 em 60 metros">L14</light>
-			</lights>
-			<thr compl="">
-				<ident>17L</ident>
-				<lights>
-					<light compl="" descr="PAPI">L9</light>
-					<light compl="" descr="REIL">L10</light>
-					<light compl="" descr="Luzes de cabeceira (verde no início e vermelha no fim da pista)">L12</light>
-				</lights>
-			</thr>
-			<thr compl="">
-				<ident>35R</ident>
-				<lights>
-					<light compl="" descr="PAPI">L9</light>
-					<light compl="" descr="REIL">L10</light>
-					<light compl="" descr="Luzes de cabeceira (verde no início e vermelha no fim da pista)">L12</light>
-				</lights>
-			</thr>
-		</runway>
-	</runways>
-	<services>
-		<service type="AirportSuppliesService">
-			<fuel/>
-		</service>
-		<service type="AirportGroundService">
-			<rffs>7</rffs>
-		</service>
-		<service type="AircraftGroundService">
-			<type>Hangar</type>
-			<cat>7</cat>
-		</service>
-		<service compl="9" type="COM">
-			<type>Torre</type>
-			<callsign>São Paulo</callsign>
-			<freqs>
-				<freq compl="">118.050</freq>
-				<freq compl="5">118.350</freq>
-				<freq compl="">127.150</freq>
-			</freqs>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service compl="9" type="COM">
-			<type>Solo</type>
-			<callsign>São Paulo</callsign>
-			<freqs>
-				<freq compl="">121.900</freq>
-			</freqs>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service compl="9,12" type="COM">
-			<type>Tráfego</type>
-			<callsign>SÃO PAULO</callsign>
-			<freqs>
-				<freq compl="">120.600</freq>
-			</freqs>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service compl="8,10" type="COM">
-			<type>ATIS</type>
-			<callsign>SÃO PAULO</callsign>
-			<freqs>
-				<freq compl="">127.650</freq>
-			</freqs>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service type="NAV">
-			<type>ILS</type>
-			<cat>CAT I</cat>
-			<thr>35L</thr>
-			<ident>ICO</ident>
-			<freq>110.1</freq>
-			<lat>2337.16S</lat>
-			<lng>04639.69W</lng>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service type="NAV">
-			<type>ILS/DME</type>
-			<cat/>
-			<thr>17R</thr>
-			<ident>ISP</ident>
-			<freq>109.3</freq>
-			<lat>2338.26S</lat>
-			<lng>04638.93W</lng>
-			<org>
-				<name/>
-				<type/>
-				<military/>
-			</org>
-		</service>
-		<service type="MET">
-			<contact>(11) 2112-3461</contact>
-			<type>Civil</type>
-			<products>1,2,3,4,5,6,7,8,9</products>
-			<selfservice>0</selfservice>
-			<org>
-				<name>DECEA</name>
-				<type>ORG</type>
-				<military>JOINT</military>
-			</org>
-		</service>
-		<service type="AIS">
-			<contact>(11) 5531-7602</contact>
-			<type>Civil</type>
-			<selfservice>0</selfservice>
-			<org>
-				<name>INFRAERO</name>
-				<type>ORG</type>
-				<military>CIVIL</military>
-			</org>
-		</service>
-	</services>
-	<rmk count="17">
-		<rmkText cod="2.8">
-			<![CDATA[Área PRKG HEL Setor W hangar LIDER, dimensão 26 x 26 M resistência 6,0t. Horário de funcionamento 0900-0000]]>
-		</rmkText>
-		<rmkText cod="2.8">
-			<![CDATA[Área PRKG (Box 19) somente embarque e desembarque com permanência máxima de quarenta minutos]]>
-		</rmkText>
-		<rmkText cod="2.8">
-			<![CDATA[Pátio aviação geral CLSD permanecendo 14 PSN para ACFT 09M e 01 PSN para ACFT 12M]]>
-		</rmkText>
-		<rmkText cod="2.8">
-			<![CDATA[TWY OSCAR limitado OPS ACFT com envergadura máxima de 24M]]>
-		</rmkText>
-		<rmkText cod="2.8">
-			<![CDATA[Área PRKG HEL Setor W hangar LIDER, dimensão 26 x 26 M resistência
+    <status>Active</status>
+    <dt>2023-09-07</dt>
+    <AeroCode>SBSP</AeroCode>
+    <ciad>SP0001</ciad>
+    <name>
+        <![CDATA[Congonhas]]>
+    </name>
+    <city>
+        <![CDATA[São Paulo]]>
+    </city>
+    <uf>SP</uf>
+    <lat>-23.626111111111</lat>
+    <lng>-46.656388888889</lng>
+    <latRotaer>23 37 34S</latRotaer>
+    <lngRotaer>046 39 23W</lngRotaer>
+    <distance>5S</distance>
+    <org>
+        <name>INFRAERO</name>
+        <type>ORG</type>
+        <military>CIVIL</military>
+    </org>
+    <workinghour compl=""/>
+    <type>AD</type>
+    <typeUtil>PUB</typeUtil>
+    <typeOpr>VFR IFR</typeOpr>
+    <cat>NAC</cat>
+    <utc>-3</utc>
+    <altM>802.91</altM>
+    <altFt>2634</altFt>
+    <fir>SBCW</fir>
+    <jur>CRCEA-SE</jur>
+    <lights>
+        <light compl="" descr="Luzes de obstáculo">L23</light>
+        <light compl="" descr="Farol rotativo de aeródromo">L21</light>
+        <light compl="" descr="Indicador de direção de vento iluminado">L26</light>
+    </lights>
+    <runways count="2">
+        <runway compl="">
+            <type>RWY</type>
+            <ident>17R/35L</ident>
+            <surface compl="">ASPH</surface>
+            <length compl="">1940</length>
+            <width compl="">45</width>
+            <surface_c compl="">50/F/B/X/T COMP</surface_c>
+            <lights>
+                <light compl="" descr="Luzes ao longo das laterais da pista de alta intensidade, de 60 em 60 metros.">L14A</light>
+            </lights>
+            <lights>
+                <light compl="" descr="Luzes (azuis) de pista de táxi, indicando sua trajetória.">L15</light>
+            </lights>
+            <lights>
+	
+	
+  	
+</lights>
+            <thr compl="">
+                <ident>17R</ident>
+                <lights>
+                    <light compl="" descr="ALSF-1">L4</light>
+                    <light compl="" descr="PAPI" gradient="2,87">L9</light>
+                    <light compl="" descr="REIL">L10</light>
+                    <light compl="" descr="Luzes de cabeceira de alta intensidade (verde no início e vermelha no fim da pista).">L12A</light>
+                </lights>
+            </thr>
+            <thr compl="">
+                <ident>35L</ident>
+                <lights>
+                    <light compl="" descr="PAPI">L9</light>
+                    <light compl="" descr="REIL">L10</light>
+                    <light compl="" descr="Luzes de cabeceira de alta intensidade (verde no início e vermelha no fim da pista).">L12A</light>
+                </lights>
+            </thr>
+        </runway>
+        <runway compl="">
+            <type>RWY</type>
+            <ident>17L/35R</ident>
+            <surface compl="">ASPH</surface>
+            <length compl="">1495</length>
+            <width compl="">45</width>
+            <surface_c compl="">38/F/B/X/U</surface_c>
+            <lights>
+                <light compl="" descr="Luzes ao longo das laterais da pista, de 60 em 60 metros">L14</light>
+            </lights>
+            <lights>
+                <light compl="" descr="Luzes (azuis) de pista de táxi, indicando sua trajetória.">L15</light>
+            </lights>
+            <lights>
+	
+	
+  	
+</lights>
+            <thr compl="">
+                <ident>17L</ident>
+                <lights>
+                    <light compl="" descr="PAPI">L9</light>
+                    <light compl="" descr="REIL">L10</light>
+                    <light compl="" descr="Luzes de cabeceira (verde no início e vermelha no fim da pista)">L12</light>
+                </lights>
+            </thr>
+            <thr compl="">
+                <ident>35R</ident>
+                <lights>
+                    <light compl="" descr="PAPI">L9</light>
+                    <light compl="" descr="REIL">L10</light>
+                    <light compl="" descr="Luzes de cabeceira (verde no início e vermelha no fim da pista)">L12</light>
+                </lights>
+            </thr>
+        </runway>
+    </runways>
+    <services>
+        <service type="AirportSuppliesService">
+            <fuel>
+                <span title="(DLY 0800-0200)"> PF TF [8]</span>
+            </fuel>
+        </service>
+        <service type="AircraftGroundService">
+            <ser>S1</ser>
+        </service>
+        <service type="AirportGroundService">
+            <rffs>
+                <cat>7</cat>
+            </rffs>
+        </service>
+        <service compl="6" type="COM">
+            <type>Torre</type>
+            <callsign>São Paulo</callsign>
+            <freqs>
+                <freq compl="">118.050</freq>
+                <freq compl="12">127.150</freq>
+            </freqs>
+            <org>
+                <name/>
+                <type/>
+                <military/>
+            </org>
+        </service>
+        <service compl="6" type="COM">
+            <type>Solo</type>
+            <callsign>São Paulo</callsign>
+            <freqs>
+                <freq compl="">121.900</freq>
+            </freqs>
+            <org>
+                <name/>
+                <type/>
+                <military/>
+            </org>
+        </service>
+        <service compl="6,9" type="COM">
+            <type>Tráfego</type>
+            <callsign>SÃO PAULO</callsign>
+            <freqs>
+                <freq compl="">120.600</freq>
+            </freqs>
+            <org>
+                <name/>
+                <type/>
+                <military/>
+            </org>
+        </service>
+        <service compl="5,7" type="COM">
+            <type>ATIS</type>
+            <callsign>SÃO PAULO</callsign>
+            <freqs>
+                <freq compl="">127.650</freq>
+            </freqs>
+            <org>
+                <name/>
+                <type/>
+                <military/>
+            </org>
+        </service>
+        <service type="NAV">
+            <type>ILS/DME</type>
+            <cat/>
+            <thr>17R</thr>
+            <ident>ISP</ident>
+            <freq>109.3</freq>
+            <lat>2338.26S</lat>
+            <lng>04638.93W</lng>
+            <org>
+                <name/>
+                <type/>
+                <military/>
+            </org>
+        </service>
+        <service type="NAV">
+            <type>ILS/DME</type>
+            <cat/>
+            <thr>35L</thr>
+            <ident>ISO</ident>
+            <freq>109.70</freq>
+            <lat>2337.16S</lat>
+            <lng>04639.69W</lng>
+            <org>
+                <name>INFRAERO</name>
+                <type>ORG</type>
+                <military>CIVIL</military>
+            </org>
+        </service>
+        <service type="MET">
+            <contact/>
+            <type>Civil</type>
+            <products/>
+            <selfservice>1</selfservice>
+            <org>
+                <name>INFRAERO</name>
+                <type>ORG</type>
+                <military>CIVIL</military>
+            </org>
+        </service>
+        <service type="AIS">
+            <contact>(11) 2112-3450</contact>
+            <type>Civil</type>
+            <selfservice>0</selfservice>
+            <org>
+                <name>INFRAERO</name>
+                <type>ORG</type>
+                <military>CIVIL</military>
+            </org>
+        </service>
+    </services>
+    <rmk count="47">
+        <rmkText cod="2.3">
+            <![CDATA[Horário de funcionamento do aeroporto São Paulo/Congonhas será das 09:00 às 02:00.]]>
+        </rmkText>
+        <rmkText cod="2.3">
+            <![CDATA[Entre 0900/1000 UTC e 0100/0200 UTC, serão proibidas as operações de ACFT cujos níveis de ruído estejam em desacordo com os limites estabelecidos nas subpartes “C” e “F” do Regulamento Brasileiro de Homologação Aeronáutica (RBAC 36), equivalentes aos capítulos 3, 5 e 10 do Anexo 16/volume 1 à Convenção de Aviação Civil Internacional e atualizações posteriores.
+]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Movimentação de ACFT na TWY SIERRA sujeita à restrição de velocidade de 15kt (nós) devido à largura estreita e à proximidade de obstáculos móveis na via de serviço paralela.
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Área PRKG HEL Setor W hangar LIDER, dimensão 26 x 26 M resistência 6,0t. Horário de funcionamento 0900-0000]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Área PRKG (Box 19) somente embarque e desembarque com permanência máxima de quarenta minutos]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Pátio aviação geral CLSD permanecendo 14 PSN para ACFT 09M e 01 PSN para ACFT 12M]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[TWY OSCAR limitado OPS ACFT com envergadura máxima de 24M]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Pista de táxi para acesso à cabeceira da RWY 17R praticável com cautela, sendo compulsória a redução de potência para MNM de táxi entre a primeira curva após a posição nº. 2 e a posição crítica nº. 3. Ver gráfico na sala AIS.
+]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[AVBL de PRKG: 
+<br>01- ACFT da aviação geral estarão sujeitas a serem desviadas para outros AD, devido pátio de PRKG e pernoite reduzido. Pátio da aviação geral, situado ao lado da RWY 17L/35R, com capacidade de 43 PSN, assim distribuídas: - 25 PSN para ACFT até 12M de envergadura; - 4 PSN para ACFT até 14M de envergadura; - 8 PSN para ACFT até 15M de envergadura; - 6 PSN para HEL. 
+<br>02- Pátios da aviação geral I e II, situados ao lado da RWY 17L/35R, destinados à estadia de ACFT. Pátio da aviação geral III Área de Manobras, situado ao lado da RWY 17R/35L, destinado à embarque e desembarque de PAX das empresas de Táxi Aéreo que operam com ACFT bimotoras, turboélice ou a jato, por tempo não superior a 01 (uma) hora, quando AUTH pela Administração do AP. 
+<br>03- Todas as PSN para PRKG de ACFT comerciais de empresas NTL e INTL no AP de Congonhas são incluídas no sistema “push-back” 
+<br>04- Somente será permitido o MAX de 40 MIN para permanência nos boxes de PRKG para os FLT domésticos regulares.]]>
+        </rmkText>
+        <rmkText cod="2.8">
+            <![CDATA[Área PRKG HEL Setor W hangar LIDER, dimensão 26 x 26 M resistência
 6,0t.Horário de funcionamento 0900-0000]]>
-		</rmkText>
-		<rmkText cod="2.10">
-			<![CDATA[OBS OBST (antena) montado distante 5667M THR 17R AZM 023DEG ELEV 3369FT]]>
-		</rmkText>
-		<rmkText cod="2.10">
-			<![CDATA[OBS torre, 12M HGT, entre as THR 17L e 17R.]]>
-		</rmkText>
-		<rmkText cod="2.16">
-			<![CDATA[Seção RWY 17L/35R na interseção desta com a TWY B, utilizável como área de LDG e DEP de helicópteros]]>
-		</rmkText>
-		<rmkText cod="2.20">
-			<![CDATA[Com finalidade de permitir saída ACFT prontas para DEP nos HR próximos ao
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBS OBST (antena) montado distante 5667M THR 17R AZM 023DEG ELEV 3369FT]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBST MONTADO (MASTRO) LGTD ALT OTP 852,20M (2796FT) AMSL NAS COORD 233836.24S/0463818.37W ]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBST (EDIFICAÇÃO) LGTD COORD 233623.83S/0463820.95W ELEV 864,94M]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBST MONTADO (MASTRO) NEG LGTD ALT OTP 897,55M (2945FT) NAS COORD 233609.54S/0463749.51W]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBS OBST (torre) BTN THR 17L e 17R, ELEV 39FT.
+]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBS OBST (EDIFICAÇÃO) LGTD COORD 233537.83S/0463818.65W ELEV 876,83M]]>
+        </rmkText>
+        <rmkText cod="2.10">
+            <![CDATA[OBST MONTADO (MASTRO)  LGTD COORD 233654,26S / 0463932,22 ALT 824,0 M (2703,50 FT) .	
+		
+			
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.16">
+            <![CDATA[Seção RWY 17L/35R na interseção desta com a TWY B, utilizável como área de LDG e DEP de helicópteros]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[OBS AIC sobre Circulação de ACFT em voo VFR na TMA-SP.]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Movimentação de aeronaves na pista de táxi "S" sujeita à restrição de velocidade de 15 kt (nós) devido à largura estreita e à proximidade de obstáculos móveis na via de serviço paralela;]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[		
+			LIMITAÇÕES: 
+<br>01- As ACFT sujeitas aos horários de transporte aéreo (REGISTRO) cumprirão, nos pousos e decolagens, o sequenciamento de tráfego estabelecido pelo órgão ATS; 
+<br>02- Somente poderão operar ACFT que possam utilizar as duas RWY para decolagem e pouso. Exceto ACFT de voo domésticos regulares de passageiros e ACFT transportando enfermos e órgãos vitais; 
+<br>03- A operação de ACFT de asas fixas só será permitida com dois pilotos, exceto as ACFT de CAT TPP, desde que operada por piloto de linha aérea (PLA); 
+<br>04- Os voos domésticos não-regulares de PAX (charter) somente serão AUTH aos SAT SUN e HOL ou fora dos horários de grande MOV a critério da autoridade aeronáutica.	
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Com finalidade de permitir saída ACFT prontas para DEP nos HR próximos ao
 fechamento do AD, poderá ser suspensa APCH ACFT que ainda não tenham
 atingido o auxílio básico do procedimento de modo a garantir o pouso em
 Congonhas até as 01:45 UTC]]>
-		</rmkText>
-		<rmkText cod="2.20">
-			<![CDATA[Helicoptero no SECT W OPR CTN devido falta de contato visual da TWR.]]>
-		</rmkText>
-		<rmkText cod="2.22">
-			<![CDATA[ACFT CAT A e B CTC prévio com APP São Paulo ou TWR São Paulo
-(TRÁFEGO ou SOLO) respectivamente, quando não houver COND LDG/
-ARR RWY 17L/35R]]>
-		</rmkText>
-		<rmkText cod="2.23">
-			<![CDATA[ACFT CAT A e B CTC prévio com APP São Paulo ou TWR São Paulo (TRÁFEGO ou SOLO) respectivamente, quando não houver COND LDG/ARR RWY 17L/35R]]>
-		</rmkText>
-		<rmkText cod="2.23">
-			<![CDATA[Devido à necessidade de pedido prévio de slot, via Central Integrada de Slots, através dos telefones 0800-2826612 ativada mediante NOTAM]]>
-		</rmkText>
-		<rmkText cod="2.23">
-			<![CDATA[Quando a serviço de Estado (pátrio ou estrangeiro) AD AVBL para OPR LAND/TKOF INTL necessitando de prévia comunicação à administração aeroportuária e dessa para a ANAC, com antecedência mínima de 24 horas (considerando finais de semana e feriados nacionais)]]>
-		</rmkText>
-		<rmkText cod="2.23">
-			<![CDATA[AD não utilizável como alternativa]]>
-		</rmkText>
-		<rmkText cod="2.24">
-			<![CDATA[OBS VAC para entrada ou saída do circuito de tráfego]]>
-		</rmkText>
-		<rmkText cod="2.24">
-			<![CDATA[Em virtude dos requisitos operacionais necessários para as STAR e/ou SID na área terminal de São Paulo, a utilização das rotas RNAV 5, saindo ou chegando do AD, será destinada exclusivamente para as aeronaves homologadas RNAV 1 ou RNP 1]]>
-		</rmkText>
-	</rmk>
-	<compls count="12">
-		<compl cod="2.14" n="1">
-			<![CDATA[MEHT: a. RWY 17R - 66FT b. RWY 35L - 61FT c. RWY 17L - 35FT d. RWY 35R - 35FT]]>
-		</compl>
-		<compl cod="2.19" n="2">
-			<![CDATA[NO AVBL além de 25NM: Setor 230/240 BLW FL050]]>
-		</compl>
-		<compl cod="2.2" n="3">
-			<![CDATA[C-AIS - Aceita PLN e suas atualizações por TEL, somente para ACFT/HEL partindo de SBSP e HELPN situados na grande São Paulo; TEL CMA (11) 2112-3461; TEL/FAX PLN (11) 5090-9022 e TEL PLN (11) 5531-7602 e 2112-3450]]>
-		</compl>
-		<compl cod="2.12" n="4">
-			<![CDATA[GROOVING]]>
-		</compl>
-		<compl cod="2.23" n="5">
-			<![CDATA[FREQ será utilizada PROC OPR específico HEL]]>
-		</compl>
-		<compl cod="2.3" n="6">
-			<![CDATA[EMS SER H24 (confeccionando METAR, SPECI e SYNOP)]]>
-		</compl>
-		<compl cod="2.23" n="7">
-			<![CDATA[TEL/FAX (11) 5090-9022 e 2112-3450.]]>
-		</compl>
-		<compl cod="2.3" n="8">
-			<![CDATA[(DLY 0900-0300)]]>
-		</compl>
-		<compl cod="2.3" n="9">
-			<![CDATA[(DLY 0900-0200)]]>
-		</compl>
-		<compl cod="2.18" n="10">
-			<![CDATA[D-ATIS]]>
-		</compl>
-		<compl cod="2.3" n="11">
-			<![CDATA[(DLY 0800-0200)]]>
-		</compl>
-		<compl cod="2.23" n="12">
-			<![CDATA[DCL]]>
-		</compl>
-	</compls>
-	<timesheets>
-		<timesheet n="8">
-			<days>
-				<day>DLY</day>
-			</days>
-			<hours>
-				<begin>09:00</begin>
-				<end>03:00</end>
-			</hours>
-			<hol>1</hol>
-		</timesheet>
-		<timesheet n="9">
-			<days>
-				<day>DLY</day>
-			</days>
-			<hours>
-				<begin>09:00</begin>
-				<end>02:00</end>
-			</hours>
-			<hol>1</hol>
-		</timesheet>
-		<timesheet n="11">
-			<days>
-				<day>DLY</day>
-			</days>
-			<hours>
-				<begin>08:00</begin>
-				<end>02:00</end>
-			</hours>
-			<hol>1</hol>
-		</timesheet>
-	</timesheets>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Reta final para pouso na RWY 17 deverá ser executada com cautela devido à existência de correntes descendentes próximas à cabeceira.
+]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[PROC especiais ATC: 
+<br>01- Por necessidade do fluxo do TFC na TMA SP e/ou no AD, a sequência de acionamento e TAX será dada pelo GNDC São Paulo; 
+<br>02- Nos horários de alta densidade de TFC, será requerido que as ACFT efetuem suas OPS de DEP e ARR com o MNM possível de tempo de ocupação da RWY em uso; 
+<br>03- O APP São Paulo poderá vetorar as ACFT em FLT IFR para APCH visual sempre que as condições MET estiverem igual ou acima de 5KM VIS e 1000FT de teto. Nessa situação, será mantido o FPL IFR da ACFT até o piloto em comando declarar CTC visual com a RWY em uso; 
+<br>04- Nas OPS de ARR, os pilotos não reportarão para a TWR São Paulo a condição de trem de pouso. EXC situações de EMERG com referência ao seu baixamento e/ou travamento.]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Condições especiais de operação:
+As ACFT cumprindo voos regulares de PAX que não puderem OPR na RWY auxiliar deverão informar esta COND a TWR no primeiro contato.
+]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Em Condições Meteorológicas de Voo por Instrumento (IMC), proibidas operações de táxi de aeronaves com letra de código de referência "B" na pista de táxi "S",
+enquanto houver operação de pouso ou decolagem de aeronaves classificadas com
+número de código de referência 1 ou 2 na pista de pouso e decolagem 17L/35R.
+	
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Enquanto houver operação de aeronaves código 3 na pista 17L/35R, proibida a
+utilização da pista de táxi "S" por aeronaves.]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[Movimentação de aeronaves na pista de táxi "N" sujeita à restrição de velocidade
+de 15 kt (nós) devido à separação desta para a pista de táxi "M" e para a linha de
+segurança do pátio 3.]]>
+        </rmkText>
+        <rmkText cod="2.20">
+            <![CDATA[OBS área de operação SIMUL de ACFT e HEL na FNA da RWY 17 de São Paulo/ Congonhas (Área de Controle Helicóptero), descrita e regulada em AIP Brasil SBSP AD 2.22(Procedimentos para os voos VFR dentro da CTR e Rotas VFR dentro da CTR).]]>
+        </rmkText>
+        <rmkText cod="2.22">
+            <![CDATA[Separação composta poderá ser aplicada na APRX final da RWY 17 e/ou rampa de TKOF da RWY 35 de São Paulo Congonhas (SBSP), entre ACFT IFR e HEL VFR em voo na área de controle HEL. Separação composta MIN a ser empregada: 2,5NMx500FT.]]>
+        </rmkText>
+        <rmkText cod="2.22">
+            <![CDATA[O aeroporto pode ser utilizado regularmente por quaisquer aeronaves compatíveis com o código de referência 4C ou inferior;]]>
+        </rmkText>
+        <rmkText cod="2.22">
+            <![CDATA[Pista de pouso e decolagem 17R/35L - Código de referência: 4C;<br>
+- Cabeceira 17R: VFR Diurno/Noturno e IFR Precisão CAT I Diurno/Noturno; e<br>
+- Cabeceira 35L: VFR Diurno/Noturno e IFR Precisão CAT I Diurno/Noturno;]]>
+        </rmkText>
+        <rmkText cod="2.22">
+            <![CDATA[Pista de pouso e decolagem 17L/35R - Código de referência: 2B<br>
+- Cabeceira 17L: VFR Diurno/Noturno e IFR Não-Precisão Diurno/Noturno; e<br>
+- Cabeceira 35R: VFR Diurno/Noturno e IFR Não-Precisão Diurno/Noturno;]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[OPS de ACFT com número de RCD do AD 3 na RWY 17L/35R somente em Condições Meteorológicas Visuais (VMC).]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[		
+			Devido à necessidade de pedido prévio de slot, via Central Integrada de Slots, através do telefone (21) 2174-7500, ativada mediante NOTAM	
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[Quando a serviço de Estado (pátrio ou estrangeiro) AD AVBL para OPR LAND/TKOF INTL necessitando de prévia comunicação à administração aeroportuária e dessa para a ANAC, com antecedência mínima de 24 horas (considerando finais de semana e feriados nacionais)]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[AD não utilizável como alternativa]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[O acionamento de APU de ACFT ou GPU, dentro do horário de funcionamento do AD,
+só será permitido em áreas determinadas pela administração do AD]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[Desde que o operador da ACFT solicite os serviços dos órgãos ATS e da administração
+do AD, com antecedência MNM de 40 minutos, e apresente à Seção de Aviação Civil
+do AD de Congonhas (SAC-SP) os documentos que comprovem devidamente a
+natureza da operação antes da DEP ou após LDG, será permitida a operação BTN
+0200/0900 UTC à ACFT:
+<br>01- transportando ou destinadas a transportar enfermo ou ferido grave;
+<br>02- transportando órgãos vitais para transplante humano;
+<br>03- engajada em operação de SAR; ou
+<br>04- em operação MIL, assim definida pela autoridade competente.]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[Com a finalidade de permitir a saída ACFT prontas para DEP nos horários próximo ao
+fechamento do AD, poderá ser suspensa APCH ACFT que ainda não tenham atingido o
+auxílio básico do PROC, com a finalidade de garantir LDG em SBSP TIL 0145 UTC]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[A TWR SÃO PAULO não informará a hora de DEP às ACFT. A instrução quanto à frequência do próximo órgão a ser chamado após a DEP e, se necessárias, instruções complementares, serão emitidas juntamente com a AUTH de decolagem. Salvo em situações excepcionais, as ACFT deverão manter escuta da FREQ da TWR até o cruzamento da THR oposta à RWY de DEP.
+]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[Proibições: 
+<br>01- BTN 1000/1300 e BTN 2100/0000 UTC a OPS de ACFT convencionais EXC SAT, SUN e HOL.
+<br>02- Planos de voo visuais de ACFT de asas fixas com DEST ou origem neste AD. 
+<br>03- Sede operacional de novas empresas de táxi aéreo e de manutenção. 
+<br>04- FLT de treinamento. 
+<br>05- FLT cargueiros, EXC voos exclusivos para o transporte de malotes bancários. 
+<br>06- Experiências e cheques com quaisquer tipos de ENG de ACFT BTN 0100-1000 UTC.
+<br>07- Aeronaves CAT A proibido OPS LDG e TKOF na RWY 17R/35L, EXC ACFT MIL e ACFT cumprindo MEDEVAC.
+<br>08- Aeronaves CAT A proibido OPS LDG e TKOF na RWY 17L/35R de MON/TUE TIL FRI/SAT de 1000-1300 e 2200-0000, EXC ACFT cumprindo MEDEVAC, ACFT MIL e ACFT que operam segundo Regulamento Brasileiro de Aviação Civil (RBAC) 121 e 135.]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[		
+			
+Sistema de desaceleração de aeronaves (EMAS) RWY 35L: 72M x 45M.	
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[		
+			Sistema de desaceleração de aeronaves (EMAS) RWY 17R: 64M X 45M.	
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[		
+			THR RWY 35R DESLOCADA EM 60M.
+		
+		]]>
+        </rmkText>
+        <rmkText cod="2.23">
+            <![CDATA[Os seguintes serviços de transporte aéreo são autorizados: <br>
+01- voos domésticos regulares de PAX;<br> 
+02- voos domésticos não-regulares (de PAX);<br> 
+03- voos não-regulares das empresas de táxi aéreo;<br> 
+04- voos da aviação geral.]]>
+        </rmkText>
+        <rmkText cod="2.24">
+            <![CDATA[OBS VAC para entrada ou saída do circuito de tráfego]]>
+        </rmkText>
+    </rmk>
+    <rmkDistDeclared count="4">
+        <rmkDist>
+            <rwy>
+                <![CDATA[17R]]>
+            </rwy>
+            <tora>
+                <![CDATA[1790]]>
+            </tora>
+            <toda>
+                <![CDATA[1940]]>
+            </toda>
+            <asda>
+                <![CDATA[1790]]>
+            </asda>
+            <lda>
+                <![CDATA[1660]]>
+            </lda>
+            <aux/>
+            <altGeoidal>
+                <![CDATA[-2,22]]>
+            </altGeoidal>
+            <lat>
+                <![CDATA[S23 37 15]]>
+            </lat>
+            <lng>
+                <![CDATA[W046 39 38]]>
+            </lng>
+        </rmkDist>
+        <rmkDist>
+            <rwy>
+                <![CDATA[35L]]>
+            </rwy>
+            <tora>
+                <![CDATA[1790]]>
+            </tora>
+            <toda>
+                <![CDATA[1940]]>
+            </toda>
+            <asda>
+                <![CDATA[1790]]>
+            </asda>
+            <lda>
+                <![CDATA[1660]]>
+            </lda>
+            <aux/>
+            <altGeoidal>
+                <![CDATA[-2,23]]>
+            </altGeoidal>
+            <lat>
+                <![CDATA[S23 38 03]]>
+            </lat>
+            <lng>
+                <![CDATA[W046 39 04]]>
+            </lng>
+        </rmkDist>
+        <rmkDist>
+            <rwy>
+                <![CDATA[17L]]>
+            </rwy>
+            <tora>
+                <![CDATA[1345]]>
+            </tora>
+            <toda>
+                <![CDATA[1345]]>
+            </toda>
+            <asda>
+                <![CDATA[1345]]>
+            </asda>
+            <lda>
+                <![CDATA[1195]]>
+            </lda>
+            <aux/>
+            <altGeoidal>
+                <![CDATA[-2,22]]>
+            </altGeoidal>
+            <lat>
+                <![CDATA[S23 37 15]]>
+            </lat>
+            <lng>
+                <![CDATA[W046 39 29]]>
+            </lng>
+        </rmkDist>
+        <rmkDist>
+            <rwy>
+                <![CDATA[35R]]>
+            </rwy>
+            <tora>
+                <![CDATA[1345]]>
+            </tora>
+            <toda>
+                <![CDATA[1345]]>
+            </toda>
+            <asda>
+                <![CDATA[1345]]>
+            </asda>
+            <lda>
+                <![CDATA[1195]]>
+            </lda>
+            <aux/>
+            <altGeoidal>
+                <![CDATA[-2,23]]>
+            </altGeoidal>
+            <lat>
+                <![CDATA[S23 37 52]]>
+            </lat>
+            <lng>
+                <![CDATA[W046 39 03]]>
+            </lng>
+        </rmkDist>
+    </rmkDistDeclared>
+    <rmkDistRemanescente count="2">
+        <rwy>
+            <![CDATA[17L/35R]]>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[3]]>
+                </sign>
+                <ft>
+                    <![CDATA[3455]]>
+                </ft>
+                <m>
+                    <![CDATA[1053]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[2]]>
+                </sign>
+                <ft>
+                    <![CDATA[2454]]>
+                </ft>
+                <m>
+                    <![CDATA[748]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[1]]>
+                </sign>
+                <ft>
+                    <![CDATA[1453]]>
+                </ft>
+                <m>
+                    <![CDATA[443]]>
+                </m>
+            </rmkDistR>
+        </rwy>
+        <rwy>
+            <![CDATA[17R/35L]]>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[5]]>
+                </sign>
+                <ft>
+                    <![CDATA[5077]]>
+                </ft>
+                <m>
+                    <![CDATA[1548]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[4]]>
+                </sign>
+                <ft>
+                    <![CDATA[4077]]>
+                </ft>
+                <m>
+                    <![CDATA[1243]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[3]]>
+                </sign>
+                <ft>
+                    <![CDATA[3076]]>
+                </ft>
+                <m>
+                    <![CDATA[938]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[2]]>
+                </sign>
+                <ft>
+                    <![CDATA[2075]]>
+                </ft>
+                <m>
+                    <![CDATA[633]]>
+                </m>
+            </rmkDistR>
+            <rmkDistR>
+                <sign>
+                    <![CDATA[1]]>
+                </sign>
+                <ft>
+                    <![CDATA[1170]]>
+                </ft>
+                <m>
+                    <![CDATA[357]]>
+                </m>
+            </rmkDistR>
+        </rwy>
+    </rmkDistRemanescente>
+    <compls count="14">
+        <compl cod="2.14" n="1">
+            <![CDATA[				
+					MEHT: a. RWY 17R - 66FT b. RWY 35L - 61FT c. RWY 17L - 45FT d. RWY 35R - 47FT
+				
+			]]>
+        </compl>
+        <compl cod="2.19" n="2">
+            <![CDATA[NO AVBL além de 25NM: Setor 230/240 BLW FL050]]>
+        </compl>
+        <compl cod="2.23" n="3">
+            <![CDATA[FREQ será utilizada PROC OPR específico HEL]]>
+        </compl>
+        <compl cod="2.3" n="4">
+            <![CDATA[EMS SER H24 (confeccionando METAR, SPECI e SYNOP)]]>
+        </compl>
+        <compl cod="2.3" n="5">
+            <![CDATA[(DLY 0900-0300)]]>
+        </compl>
+        <compl cod="2.3" n="6">
+            <![CDATA[(DLY 0900-0200)]]>
+        </compl>
+        <compl cod="2.18" n="7">
+            <![CDATA[D-ATIS]]>
+        </compl>
+        <compl cod="2.3" n="8">
+            <![CDATA[(DLY 0800-0200)]]>
+        </compl>
+        <compl cod="2.23" n="9">
+            <![CDATA[DCL]]>
+        </compl>
+        <compl cod="2.23" n="10">
+            <![CDATA[Autoatendimento]]>
+        </compl>
+        <compl cod="2.23" n="12">
+            <![CDATA[FREQ reserva]]>
+        </compl>
+        <compl cod="2.23" n="13">
+            <![CDATA[AIS é prestado pelo Centro de Informação Aeronáutica de São Paulo (C-AIS SP), TEL PLN (11) 2112-3450. Para INFO adicionais TEL (11) 2112-3451 ou (11) 5531-7602.
+				
+			]]>
+        </compl>
+        <compl cod="2.23" n="14">
+            <![CDATA[CPA:
+RWY 17R/35L]]>
+        </compl>
+        <compl cod="2.12" n="15">
+            <![CDATA[GROOVING			
+				
+			]]>
+        </compl>
+    </compls>
+    <timesheets>
+        <timesheet n="5">
+            <days>
+                <day>DLY</day>
+            </days>
+            <hours>
+                <begin>09:00</begin>
+                <end>03:00</end>
+            </hours>
+            <hol>1</hol>
+        </timesheet>
+        <timesheet n="6">
+            <days>
+                <day>DLY</day>
+            </days>
+            <hours>
+                <begin>09:00</begin>
+                <end>02:00</end>
+            </hours>
+            <hol>1</hol>
+        </timesheet>
+        <timesheet n="8">
+            <days>
+                <day>DLY</day>
+            </days>
+            <hours>
+                <begin>08:00</begin>
+                <end>02:00</end>
+            </hours>
+            <hol>1</hol>
+        </timesheet>
+    </timesheets>
 </aisweb>

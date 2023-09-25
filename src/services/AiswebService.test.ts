@@ -6,8 +6,8 @@ import fs from "fs";
 import path from "path";
 
 import { Airport } from "@/models/Airport";
-import { AirportChart } from "@/models/AirportChart";
 import { AiswebService } from "@/services/AiswebService";
+import { AirportChartList } from "@/models/AirportChartList";
 
 const AirportXMLMockData = fs.readFileSync(path.resolve(__dirname, "../mockDatas/airport.xml"), "utf-8");
 const AirportsXMLMockData = fs.readFileSync(path.resolve(__dirname, "../mockDatas/airports.xml"), "utf-8");
@@ -43,11 +43,7 @@ describe("AiswebService", () => {
 
     const response = await aiswebService.getAirportChartsByIcao("SBSP");
     
-    response.forEach(item => {
-      expect(item).toBeInstanceOf(AirportChart);
-    });
-
-    expect(response).toHaveLength(3);
+    expect(response).toBeInstanceOf(AirportChartList);
 
     server.close();
   });

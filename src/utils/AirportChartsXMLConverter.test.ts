@@ -5,22 +5,29 @@ import path from "path";
 
 import { AirportChartsXMLConverter } from "./AirportChartsXMLConverter";
 import { AirportChart } from "@/models/AirportChart";
+import { AirportChartList } from "@/models/AirportChartList";
 
 const ChartsMockXMLData = fs.readFileSync(path.resolve(__dirname, "../mockDatas/charts.xml"), "utf-8");
 
 const airportCharts = AirportChartsXMLConverter.convert(ChartsMockXMLData);
 
 describe("AirportChartsXMLConverter", () => {
-  test("O método .convert deve retornar uma lista de AirportChart", () => {
-    for (const airportChart of airportCharts) {
-      expect(airportChart).instanceOf(AirportChart);
+  test("O método .convert deve retornar uma instancia de AirportChartList", () => {
+    expect(airportCharts).toBeInstanceOf(AirportChartList);
+  });
+
+  test("O método .convert deve criar uma instancia de AirportChartList corretamente", () => {
+    for (const airportChart of airportCharts.items) {
+      expect(airportChart).toBeInstanceOf(AirportChart);
     }
 
-    expect(airportCharts).toHaveLength(3);
+    expect(airportCharts.items).toHaveLength(3);
+    expect(airportCharts.lastUpdate).toBeInstanceOf(Date);
+    expect(airportCharts.lastUpdate.getTime()).toBe(new Date("2023-09-11 18:27:41").getTime());
   });
 
   test("O método .convert deve criar AirportChart corretamente", () => {
-    const airportChart = airportCharts.at(0)!;
+    const airportChart = airportCharts.items.at(0)!;
 
     expect(airportChart.id).toBe("c989852d-7005-403a-b094a64a50bd071c");
     expect(airportChart.name).toBe("AD 2 SBSP A");
@@ -29,8 +36,12 @@ describe("AirportChartsXMLConverter", () => {
   });
 
   test("O método .convert deve criar as instancias de AirportChart corretamente mesmo que o XML não tenha todos os dados", () => {
-    const airportCharts = AirportChartsXMLConverter.convert("<item></item>");
-    const airportChart = airportCharts.at(0)!;
+    const airportCharts = AirportChartsXMLConverter.convert(`
+      <cartas lastupdate="{ts '2023-09-11 18:27:41'}">
+        <item></item>
+      </cartas>
+    `);
+    const airportChart = airportCharts.items.at(0)!;
 
     expect(airportChart.id).toBe("");
     expect(airportChart.name).toBe("");

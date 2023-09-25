@@ -1,8 +1,10 @@
 import { DOMParser } from "@xmldom/xmldom";
+
 import { AirportChart } from "@/models/AirportChart";
+import { AirportChartList } from "@/models/AirportChartList";
 
 export class AirportChartsXMLConverter {
-  static convert(xml: string): AirportChart[] {
+  static convert(xml: string): AirportChartList {
     const doc = new DOMParser().parseFromString(xml, "text/xml");
     
     const items = doc.getElementsByTagName("item");
@@ -20,6 +22,12 @@ export class AirportChartsXMLConverter {
       );
     });
 
-    return charts;
+    const lastUpdate = doc.getElementsByTagName("cartas")[0]?.getAttribute("lastupdate")?.replace("ts", "").replaceAll("'", "").replace("{", "").replace("}", "").trim() || "" as string;
+    const lastUpdateDate = lastUpdate ? new Date(lastUpdate) : new Date();
+
+    return new AirportChartList(
+      charts,
+      lastUpdateDate
+    );
   }
 }
