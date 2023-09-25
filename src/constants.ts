@@ -1,1 +1,1 @@
-export const AIRPORTS_PER_PAGE = 20;
+export const AIRPORTS_PER_PAGE = 35;
