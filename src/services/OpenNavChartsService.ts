@@ -96,14 +96,14 @@ export class OpenNavChartsService {
     }
   }
 
-  async getAirportByIcao(icao: string): Promise<Airport> {
+  async getAirportByIcao(icao: string): Promise<Airport | null> {
     const airportData = await this.databaseService.db.airports.findUnique({
       where: {
         id: icao
       }
     });
 
-    if (!airportData) throw new Error("Airport not found");
+    if (!airportData) return null;
 
     return new Airport(
       airportData.icao,

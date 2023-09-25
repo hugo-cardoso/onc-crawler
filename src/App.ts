@@ -1,5 +1,6 @@
 import { AiswebService } from "@/services/AiswebService";
 import { OpenNavChartsService } from "./services/OpenNavChartsService";
+import { AirportChartList } from "@/models/AirportChartList";
 
 import { AIRPORTS_PER_PAGE } from "@/constants";
 
@@ -33,8 +34,20 @@ export class App {
             console.log(`[${airport.icao}] - Loading`);
             airport.charts = await this.aiswebService.getAirportChartsByIcao(airport.icao);
 
-            await this.openNavChartsService.saveAirport(airport);
-            await this.openNavChartsService.saveAirportChartsToBucket(airport);
+            const savedAirport = await this.openNavChartsService.getAirportByIcao(airport.icao);
+
+            await Promise.all([
+              await this.openNavChartsService.saveAirport(airport),
+              async () => {
+                if (
+                  !!savedAirport &&
+                  AirportChartList.checkIsUpdated(airport.charts, savedAirport.charts)
+                ) {
+                  await this.openNavChartsService.saveAirportChartsToBucket(airport);
+                }
+              }
+            ]);
+
             console.log(`[${airport.icao}] - OK`);
           })
         )
