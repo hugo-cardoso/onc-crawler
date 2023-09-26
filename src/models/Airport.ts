@@ -11,4 +11,9 @@ export class Airport {
     public readonly lastUpdate: Date,
     public charts: AirportChartList,
   ) {}
+
+  static checkIsUpdated(local: Airport, remote: Airport) {
+    if (!local.lastUpdate || !remote.lastUpdate) return false;
+    return remote.lastUpdate.getTime() >= local.lastUpdate.getTime();
+  }
 }

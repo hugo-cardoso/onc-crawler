@@ -3,6 +3,7 @@ import { OpenNavChartsService } from "./services/OpenNavChartsService";
 import { AirportChartList } from "@/models/AirportChartList";
 
 import { AIRPORTS_PER_PAGE } from "@/constants";
+import { Airport } from "./models/Airport";
 
 export class App {
   aiswebService = new AiswebService();
@@ -22,7 +23,11 @@ export class App {
       console.log(`Total Airports: ${airportCount}`);
       console.log(`Total Pages:    ${airportsPageCount}`);
 
+      const airportsSaveds = await this.openNavChartsService.getAirports();
+      console.log(`Saveds Airports: ${airportsSaveds.length}`);
+
       for (let page = 1; page <= airportsPageCount; page++) {
+        console.time("Finished in");
         console.log("--------------------------------------------------");
         console.log(`Page: ${page}/${airportsPageCount}`);
         console.log("--------------------------------------------------");
@@ -34,23 +39,39 @@ export class App {
             console.log(`[${airport.icao}] - Loading`);
             airport.charts = await this.aiswebService.getAirportChartsByIcao(airport.icao);
 
-            const savedAirport = await this.openNavChartsService.getAirportByIcao(airport.icao);
+            const savedAirport = airportsSaveds.find(savedAirport => savedAirport.icao === airport.icao);
 
-            await Promise.all([
-              await this.openNavChartsService.saveAirport(airport),
-              async () => {
-                if (
-                  !!savedAirport &&
-                  AirportChartList.checkIsUpdated(airport.charts, savedAirport.charts)
-                ) {
-                  await this.openNavChartsService.saveAirportChartsToBucket(airport);
-                }
-              }
-            ]);
+            if (!savedAirport) {
+              console.log(`[${airport.icao}] - New`);
+              await Promise.all([
+                await this.openNavChartsService.saveAirport(airport),
+                await this.openNavChartsService.saveAirportChartsToBucket(airport)
+              ]);
+            } else {
+              await Promise.all([
+                new Promise(async (resolve) => {
+                  if (!Airport.checkIsUpdated(airport, savedAirport)) {
+                    console.log(`[${airport.icao}] - Updated`);
+                    await this.openNavChartsService.saveAirport(airport);
+                  }
+                  resolve("");
+                }),
+                new Promise(async (resolve) => {
+                  if (!AirportChartList.checkIsUpdated(airport.charts, savedAirport.charts)) {
+                    console.log(`[${airport.icao}] - Updated Charts`);
+                    await this.openNavChartsService.updateAirportChartsLastUpdate(airport.icao, airport.charts.lastUpdate);
+                    await this.openNavChartsService.saveAirportChartsToBucket(airport);
+                  }
+                  resolve("");
+                })
+              ]);
+            }
 
             console.log(`[${airport.icao}] - OK`);
           })
         )
+
+        console.timeEnd("Finished in");
       }
     } catch (error) {
       console.error(error);

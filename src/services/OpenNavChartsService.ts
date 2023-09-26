@@ -122,4 +122,36 @@ export class OpenNavChartsService {
       )
     )
   }
+
+  async getAirports(): Promise<Airport[]> {
+    const airportsData = await this.databaseService.db.airports.findMany();
+
+    return airportsData.map(airportData => new Airport(
+      airportData.icao,
+      airportData.name,
+      new AirportLocation(
+        airportData.location.city,
+        airportData.location.state,
+        airportData.location.coordinates.lat,
+        airportData.location.coordinates.lng
+      ),
+      airportData.radios,
+      airportData.lastUpdate,
+      new AirportChartList(
+        airportData.charts.map(chart => new AirportChart(chart.id, chart.name, chart.type, chart.chartUrl)),
+        airportData.chartsLastUpdate
+      )
+    ));
+  }
+
+  async updateAirportChartsLastUpdate(icao: string, lastUpdate: Date) {
+    return await this.databaseService.db.airports.update({
+      where: {
+        id: icao
+      },
+      data: {
+        chartsLastUpdate: lastUpdate
+      }
+    });
+  }
 }

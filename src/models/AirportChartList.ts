@@ -8,6 +8,6 @@ export class AirportChartList {
 
   static checkIsUpdated(local: AirportChartList, remote: AirportChartList) {
     if (!local.lastUpdate || !remote.lastUpdate) return false;
-    return local.lastUpdate.getTime() > remote.lastUpdate.getTime();
+    return remote.lastUpdate.getTime() >= local.lastUpdate.getTime();
   }
 }

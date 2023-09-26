@@ -23,7 +23,7 @@ describe("AirportChartsXMLConverter", () => {
 
     expect(airportCharts.items).toHaveLength(3);
     expect(airportCharts.lastUpdate).toBeInstanceOf(Date);
-    expect(airportCharts.lastUpdate.getTime()).toBe(new Date("2023-09-11 18:27:41").getTime());
+    expect(airportCharts.lastUpdate.getTime()).toBe(new Date("2023-09-07 12:00").getTime());
   });
 
   test("O método .convert deve criar AirportChart corretamente", () => {

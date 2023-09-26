@@ -22,8 +22,8 @@ export class AirportChartsXMLConverter {
       );
     });
 
-    const lastUpdate = doc.getElementsByTagName("cartas")[0]?.getAttribute("lastupdate")?.replace("ts", "").replaceAll("'", "").replace("{", "").replace("}", "").trim() || "" as string;
-    const lastUpdateDate = lastUpdate ? new Date(lastUpdate) : new Date();
+    const lastUpdate = doc.getElementsByTagName("cartas")[0]?.getAttribute("emenda");
+    const lastUpdateDate = lastUpdate ? new Date(`${lastUpdate} 12:00`) : new Date();
 
     return new AirportChartList(
       charts,
