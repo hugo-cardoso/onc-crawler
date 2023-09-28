@@ -1,13 +1,21 @@
-import { AiswebService } from "@/services/AiswebService";
-import { OpenNavChartsService } from "./services/OpenNavChartsService";
+import { Airport } from "./models/Airport";
 import { AirportChartList } from "@/models/AirportChartList";
 
+import { AiswebService } from "@/services/AiswebService";
+import { OpenNavChartsRepositoryPrisma } from "@/repositories/OpenNavChartsRepositoryPrisma";
+import { ChartFilesRepositoryS3Bucket } from "@/repositories/ChartFilesRepositoryS3Bucket";
+
 import { AIRPORTS_PER_PAGE } from "@/constants";
-import { Airport } from "./models/Airport";
 
 export class App {
   aiswebService = new AiswebService();
-  openNavChartsService = new OpenNavChartsService();
+  openNavChartsRepository = new OpenNavChartsRepositoryPrisma();
+  chartFilesRepository = new ChartFilesRepositoryS3Bucket(
+    process.env.AWS_ACCESS_KEY_ID!,
+    process.env.AWS_SECRET_ACCESS_KEY!,
+    process.env.AWS_BUCKET_REGION!,
+    process.env.AWS_BUCKET_NAME!,
+  );
 
   constructor() {
     console.clear();
@@ -23,7 +31,7 @@ export class App {
       console.log(`Total Airports: ${airportCount}`);
       console.log(`Total Pages:    ${airportsPageCount}`);
 
-      const airportsSaveds = await this.openNavChartsService.getAirports();
+      const airportsSaveds = await this.openNavChartsRepository.getAirports();
       console.log(`Saveds Airports: ${airportsSaveds.length}`);
 
       for (let page = 1; page <= airportsPageCount; page++) {
@@ -44,26 +52,24 @@ export class App {
             if (!savedAirport) {
               console.log(`[${airport.icao}] - New`);
               await Promise.all([
-                await this.openNavChartsService.saveAirport(airport),
-                await this.openNavChartsService.saveAirportChartsToBucket(airport)
+                await this.openNavChartsRepository.saveAirport(airport),
+                await this.chartFilesRepository.saveChartFiles(airport.icao, airport.charts)
               ]);
             } else {
               await Promise.all([
-                new Promise(async (resolve) => {
+                await (async () => {
                   if (!Airport.checkIsUpdated(airport, savedAirport)) {
                     console.log(`[${airport.icao}] - Updated`);
-                    await this.openNavChartsService.saveAirport(airport);
+                    await this.openNavChartsRepository.saveAirport(airport);
                   }
-                  resolve("");
-                }),
-                new Promise(async (resolve) => {
+                })(),
+                await (async () => {
                   if (!AirportChartList.checkIsUpdated(airport.charts, savedAirport.charts)) {
                     console.log(`[${airport.icao}] - Updated Charts`);
-                    await this.openNavChartsService.updateAirportChartsLastUpdate(airport.icao, airport.charts.lastUpdate);
-                    await this.openNavChartsService.saveAirportChartsToBucket(airport);
+                    await this.openNavChartsRepository.updateAirportChartsLastUpdate(airport.icao, airport.charts.lastUpdate);
+                    await this.chartFilesRepository.saveChartFiles(airport.icao, airport.charts);
                   }
-                  resolve("");
-                })
+                })()
               ]);
             }
 
